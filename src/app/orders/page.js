@@ -72,8 +72,8 @@ export default function Orders() {
                         <th className="px-4 py-2">Customer Name</th>
                         <th className="px-4 py-2">Phone Number</th>
                         <th className="px-4 py-2">Address</th>
-                        <th className="px-4 py-2">Dish Name</th>
-                        <th className="px-4 py-2">Toppings</th>
+                        <th className="px-4 py-2">Product</th>
+                        <th className="px-4 py-2">Colors</th>
                         <th className="px-4 py-2">Size</th>
                         <th className="px-4 py-2">Price</th>
                         <th className="px-4 py-2">Ordered</th>
@@ -97,7 +97,7 @@ export default function Orders() {
                                         )}
                                         <td className="px-4 py-2">{item.name}</td>
                                         <td className="px-4 py-2">
-                                            {item.toppings.length > 0 ? item.toppings.map(topping => topping.name).join(', ') : 'None'}
+                                            {item?.colors?.length > 0 ? item.colors.map(color => color.name).join(', ') : 'None'}
                                         </td>
                                         <td className="px-4 py-2">{item.size ? item.size.name : 'Default'}</td>
                                         <td className="px-4 py-2">₹{cartItemsPrice(item).toFixed(2)}</td>

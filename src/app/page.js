@@ -29,8 +29,6 @@ export default function Home() {
 					<a href="tel:+43738123123" className="text-4xl underline">+43 738 123 123</a>
 				</div>
 			</section>
-
-			
 		</>
 	);
 }

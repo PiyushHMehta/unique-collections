@@ -11,9 +11,9 @@ export function cartItemsPrice(cartItem) {
     if (cartItem.size) {
         price += cartItem.size.price
     }
-    if (cartItem.toppings.length > 0) {
-        for (const topping of cartItem.toppings) {
-            price += topping.price
+    if (cartItem.colors?.length > 0) {
+        for (const color of cartItem.colors) {
+            price += color.price
         }
     }
 
@@ -36,9 +36,9 @@ export function AppProvider({ children }) {
         }
     }
 
-    function addToCart(product, size = null, toppings = []) {
+    function addToCart(product, size = null, colors = []) {
         setCartItems(prev => {
-            const cartItem = { ...product, size, toppings }
+            const cartItem = { ...product, size, colors }
             const newItems = [...prev, cartItem]
             saveCartItemsToLocalStorage(newItems)
             return newItems

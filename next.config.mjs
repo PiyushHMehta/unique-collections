@@ -8,12 +8,12 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'pizza-ordering-website.s3.amazonaws.com',
+                hostname: 'res.cloudinary.com', 
             },
             {
                 protocol: 'https',
-                hostname: 'res.cloudinary.com', // Cloudinary added here
-            },
+                hostname: 'images.unsplash.com', 
+            }
         ],
     },
 };

@@ -9,7 +9,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
     return (
         <div className="flex justify-center mt-4">
             <button
-                className="px-3 py-1 mx-1 bg-gray-200 rounded disabled:opacity-50"
+                className="px-3 py-1 mx-1 flex justify-end items-center bg-gray-200 rounded disabled:opacity-50"
                 onClick={() => onPageChange(currentPage - 1)}
                 disabled={currentPage === 1}
             >

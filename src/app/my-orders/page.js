@@ -73,12 +73,14 @@ export default function UserOrders() {
                         {order.cartItems.map((item, itemIndex) => (
                             <div key={`${orderIndex}-${itemIndex}`} className="border-b border-gray-200 pb-2 mb-2">
                                 <div className="flex justify-between">
-                                    <div className="text-sm font-medium text-primary">Dish Name:</div>
+                                    <div className="text-sm font-medium text-primary">Product:</div>
                                     <div className="text-sm">{item.name}</div>
                                 </div>
                                 <div className="flex justify-between">
-                                    <div className="text-sm font-medium text-primary">Toppings:</div>
-                                    <div className="text-sm">{item.toppings.length > 0 ? item.toppings.map(topping => topping.name).join(', ') : 'None'}</div>
+                                    <div className="text-sm font-medium text-primary">Colors:</div>
+                                    <div className="text-sm">
+                                        {item?.colors?.length > 0 ? item.colors.map(color => color.name).join(', ') : 'None'}
+                                    </div>
                                 </div>
                                 <div className="flex justify-between">
                                     <div className="text-sm font-medium text-primary">Size:</div>

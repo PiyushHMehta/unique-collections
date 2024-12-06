@@ -10,7 +10,7 @@ export default function MenuItemForm({ onSubmit, menuItem }) {
     const [basePrice, setBasePrice] = useState(menuItem?.basePrice || '');
     const [image, setImage] = useState(menuItem?.image || '');
     const [sizes, setSizes] = useState(menuItem?.sizes || []);
-    const [toppings, setToppings] = useState(menuItem?.toppings || []);
+    const [colors, setColors] = useState(menuItem?.colors || []);
 
     useEffect(() => {
         fetch('/api/categories').then(res => {
@@ -26,7 +26,7 @@ export default function MenuItemForm({ onSubmit, menuItem }) {
 
     return (
         <form
-            onSubmit={ev => onSubmit(ev, { image, name, description, category, basePrice, sizes, toppings })}
+            onSubmit={ev => onSubmit(ev, { image, name, description, category, basePrice, sizes, colors })}
             className="mt-8 max-w-2xl mx-auto">
             <div className="md:grid gap-4 items-start" style={{ 'gridTemplateColumns': '.3fr .7fr' }}>
                 <div>
@@ -51,7 +51,7 @@ export default function MenuItemForm({ onSubmit, menuItem }) {
 
                     <MenuItemPriceProps name={'Sizes'} addLabel={'Add item size'} props={sizes} setProps={setSizes} />
 
-                    <MenuItemPriceProps name={'Extras'} addLabel={'Add toppings'} props={toppings} setProps={setToppings} />
+                    <MenuItemPriceProps name={'Colors'} addLabel={'Add colors'} props={colors} setProps={setColors} />
 
                     <button type="submit">Save</button>
                 </div>

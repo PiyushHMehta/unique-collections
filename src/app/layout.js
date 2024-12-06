@@ -16,7 +16,7 @@ export const metadata = {
   description: "Explore a wide range of stylish menswear at Unique Collections. From formal wear to casual streetwear, perfect for every modern man in Kalyan, Mumbai.",
   keywords: "menswear, premium clothing, unique collections, fashion, formal wear, streetwear, Kalyan, Mumbai, Maharashtra, India",
   author: "Unique Collections",
-  image: "/menswear-logo.png",
+  image: "public/uc-logo.jpg",
   url: "https://unique-collections.vercel.app/",
 };
 
